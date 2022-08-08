@@ -16,9 +16,6 @@ export default {
 
   methods: {
     submitData() {
-      localStorage.setItem('age', this.age.toString())
-      localStorage.setItem('expectancy', this.expectancy.toString())
-
       this.mainStore.setData({
         age: this.age,
         expectancy: this.expectancy,

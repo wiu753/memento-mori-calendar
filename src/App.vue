@@ -16,7 +16,10 @@ export default {
   computed: {
     calendar() {
       return this.mainStore.calendar
-    }
+    },
+    stuffIsOk() {
+      return this.mainStore.stuffIsOk
+    },
   }
 }
 
@@ -28,7 +31,7 @@ export default {
 
 <template>
   <main class="h-screen bg-neutral-800">
-    <Entry v-if="!calendar"/>
+    <Entry v-if="!calendar && !stuffIsOk"/>
     <Calendar v-else />
   </main>
 </template>
