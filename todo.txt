@@ -1,4 +1,0 @@
-What I want to get done today:
-1. Render the calendar part
-2. Be able to swap back and fourth from the two screens by clearing the localStorage
-3. i
