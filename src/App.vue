@@ -33,8 +33,9 @@ export default {
 
 <template>
   <main class="h-screen bg-neutral-800">
-    <Entry v-if="!loadCalendar"/>
-    <template v-else>
+  <Entry v-if="!loadCalendar"/>
+  <Calendar v-else />
+    <!-- <template v-else>
       <div class="text-white flex">
         <div class="bg-slate-200 h-3 w-3"></div>
         <div class=""></div>
@@ -43,7 +44,7 @@ export default {
         <div class=""></div>
         <div class=""></div>
       </div>
-    </template>
+    </template> -->
     <!-- <Calendar v-else /> -->
   </main>
 </template>
