@@ -14,11 +14,13 @@ export default {
     Calendar,
   },
   computed: {
-    calendar() {
-      return this.mainStore.calendar
-    },
-    stuffIsOk() {
-      return this.mainStore.stuffIsOk
+    loadCalendar() {
+      console.log("Inside loadCalendar", this.mainStore.loadCalendar)
+      if (this.mainStore.showCalendar || this.mainStore.loadCalendar) {
+        return true
+      } else {
+        return false
+      }
     },
   }
 }
@@ -31,8 +33,18 @@ export default {
 
 <template>
   <main class="h-screen bg-neutral-800">
-    <Entry v-if="!calendar && !stuffIsOk"/>
-    <Calendar v-else />
+    <Entry v-if="!loadCalendar"/>
+    <template v-else>
+      <div class="text-white flex">
+        <div class="bg-slate-200 h-3 w-3"></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+      </div>
+    </template>
+    <!-- <Calendar v-else /> -->
   </main>
 </template>
 
