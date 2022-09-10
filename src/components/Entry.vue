@@ -18,7 +18,7 @@ export default {
     submitData() {
       this.mainStore.setData({
         birthDay: this.birthDay,
-        expectancy: this.expectancy,
+        expectancy: parseInt(this.expectancy),
       })
     }
   },
@@ -53,12 +53,20 @@ export default {
               Life expectancy
             </label>
             <div class="mt-1">
-              <input
+              <select
                 v-model="expectancy"
                 type="number"
                 placeholder="80"
+                list="ages"
                 class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              />
+              >
+              <option value="60">60</option>
+              <option value="70">70</option>
+              <option selected="selected" value="80">80</option>
+              <option value="90">90</option>
+              <option value="100">100</option>
+              <option value="110">110</option>
+            </select>
             </div>
           </div>
 

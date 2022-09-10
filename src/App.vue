@@ -32,7 +32,7 @@ export default {
 </script>
 
 <template>
-  <main class="h-screen bg-neutral-800">
+  <main class="min-h-screen bg-neutral-800">
   <Entry v-if="!loadCalendar"/>
   <Calendar v-else />
     <!-- <template v-else>

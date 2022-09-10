@@ -3,7 +3,7 @@
   "author": "Martin Wiu",
   "version": "1.0.0",
   "manifest_version": 3,
-  "description": "Every time you open a new tab, a calendar shows the length of your life in weeks.",
+  "description": "Every time you open a new tab, a calendar shows how long you have left of your life.",
   "permissions": ["storage", "tabs"],
   "chrome_url_overrides": {
     "newtab": "index.html"
@@ -13,5 +13,8 @@
     "32": "icon-32x32.png",
     "192": "icon-192x192.png",
     "512": "icon-512x512.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
   }
 }

@@ -13,9 +13,6 @@ export const useMainStore = defineStore("main", {
         return false;
       }
     },
-    weeksToFill: (state) => {
-      
-    }
   },
 
   // ------------------------------------ ACTIONS ------------------------------------
@@ -38,6 +35,7 @@ export const useMainStore = defineStore("main", {
         localStorage.setItem('weeksToLive', this.weeksToLive.toString())
         localStorage.setItem('weeksLived', this.weeksLived.toString())
         localStorage.setItem('loadCalendar', 'true')
+        localStorage.setItem('expectedYearsToLive', expectancy.toString())
         console.log("Data set in local storage!")
       } else {
         console.log("Invalid data");
