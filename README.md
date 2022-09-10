@@ -1,6 +1,10 @@
 # memento-mori-calendar
 
 This template should help get you started developing with Vue 3 in Vite.
+## Screenshots
+![New tab](./public/newtab.png)
+![Options](./public/options.png)
+
 
 ## Recommended IDE Setup
 
